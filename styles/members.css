@@ -1,0 +1,19 @@
+html {
+	font-family:sans-serif, arial;
+}
+header {
+	text-align:center;
+}
+main img{
+	height:400px;
+}
+.container {
+	display:flex;
+	justify-content: space-evenly;
+}
+div h2 {
+	padding-bottom:25px;
+}
+footer {
+	text-align:center:
+}
