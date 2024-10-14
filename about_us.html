@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <style>
+        /* CSS for styling the image */
+        .container {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: top;
+        }
+
+        /* CSS for the navigation bar */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            height: 60px;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a.active {
+            background-color: #007bff;
+        }
+
+        .navbar img {
+            height: 40px;
+            width: auto;
+            display: block;
+            margin: auto;
+            position: relative;
+            top: -5px;
+        }
+
+        .navbar li:nth-last-child(1) {
+            margin-left: 567px;
+        }
+
+        .contain {
+            max-width: 100%;
+            max-height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* About Us Section */
+        .about-us {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .about-us h2 {
+            font-family: fantasy;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Styles for the image box container */
+        .image-box-container {
+            display: flex; /* Use Flexbox for alignment */
+            justify-content: center; /* Center the images */
+            flex-wrap: wrap; /* Allow wrapping if necessary */
+            width: 100%; /* Full width to ensure alignment */
+            overflow: hidden; /* Prevent overflow */
+            background-color: #333; /* Set background color to black */
+            padding: 20px 0; /* Add padding for spacing */
+        }
+
+        .image-box {
+            width: 50%; /* Set width to 50% for two images per row */
+            height: 250px; /* Fixed height for all images */
+            box-sizing: border-box; /* Include padding/border in width/height */
+            margin: 0; /* Remove margin to avoid gaps */
+        }
+
+        .image-box:nth-child(odd) {
+            border-right: 4px solid white; /* Thicker white line */
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures images cover the box and maintain aspect ratio */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.5s ease-in; /* Smooth transition */
+        }
+
+        .image-box.show img {
+            opacity: 1; /* Fully visible when the class is added */
+        }
+
+        /* Awards Section */
+        .awards {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .awards h2 {
+            font-family: fantasy;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .awards p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer img {
+            width: 50px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!--NAV BAR-->
+    <ul class="navbar">
+        <li><a href="index.html"><img src="images/logos.png" alt="Index Logo"></a></li>
+        <li><a href="members.html">Staff</a></li>
+        <li><a href="merch.html">Merchandise</a></li>
+        <li><a href="about_us.html">About</a></li>
+        <li><a href="oldmembers.html">Team</a></li>
+        <li><a href="contact_us.html">Contact</a></li>
+        <li><a href="https://www.youtube.com/@Luna-Techs-20182"><img src="images/icons8-youtube-48.png" alt="YouTube"></a></li>
+        <li><a href="https://www.instagram.com/ftclunatechs?igsh=MTV1YjR5cTNmZDd6Nw%3D%3D&utm_source=qr"><img src="images/icons8-instagram-48.png" alt="Instagram"></a></li>
+        <li><a href="https://www.tiktok.com/@lunatechs1"><img src="images/icons8-tiktok-48.png" alt="TikTok"></a></li>
+        <li><a href="https://www.ssdmo.org/southtech"><img src="images/South_Tech.png" alt="South Tech"></a></li>
+    </ul>
+
+    <header>
+        <div class="container">
+            <img src="images/gamedrop2.jpg" alt="Game Drop">
+            <div class="centered">About Us</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-us">
+            <h2>About Luna Techs</h2>
+            <p>
+                The Luna Techs are a passionate group of young innovators based in South Technical High School, our team is made of individuals who share a common goal: to push the boundaries of technology through collaboration and creativity.
+
+Each year, we come together to design and build robots for competitions like the FIRST Robotics Competition, where we apply our skills in engineering, programming, and problem-solving. Beyond the competitions, we focus on fostering teamwork, developing leadership skills, and inspiring each other to think outside the box. We start every season striving to be better than the last. We are accomplished in multiple categories, we are competition finalists as well as winners of the design award. We as a team reinvent ourselves and challenge our own designs every day. At Luna Techs, we're productive with all teammates having their own special roles; everybody contributes to our success.
+            </p>
+        </section>
+
+        <section class="image-box-container">
+            <div class="image-box"><img src="images/TeamImage.jpg" alt="Photo 1"></div>
+            <div class="image-box"><img src="images/bot2.jpg" alt="Photo 2"></div>
+            <div class="image-box"><img src="images/lockedIn.jpg" alt="Photo 3"></div>
+            <div class="image-box"><img src="images/TP.jpg" alt="Photo 4"></div>
+        </section>
+
+        <section class="awards">
+            <h2>Awards</h2>
+            <p>
+                Our team has won a multitude of accolades, including 2nd place at the August 31st Robot Rumble @ WWT RACEWAY and the Design Award from our 2023-24 FTC Robotics season. Luna Techs Robotics has garnered recognition for its innovative designs and cutting-edge engineering. As we look to the future, we remain dedicated to pushing boundaries and challenging ourselves. While also having a ton of fun!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2024 lunatechs20182. All Rights Reserved.</p>
+        <img src="images/FTC_Logo.png.png" alt="FTC Logo">
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageBoxes = document.querySelectorAll('.image-box');
+
+            function showImages() {
+                const windowHeight = window.innerHeight;
+                imageBoxes.forEach(box => {
+                    const boxTop = box.getBoundingClientRect().top;
+                    if (boxTop < windowHeight - 50) { // Adjust threshold as needed
+                        box.classList.add('show');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', showImages);
+            showImages(); // Call once on page load
+        });
+    </script>
+</body>
+</html>

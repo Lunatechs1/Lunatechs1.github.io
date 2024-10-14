@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luna Tech</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <style>
+        /* Additional CSS */
+        body {
+            margin: 0; /* Remove default body margin */
+        }
+
+        #video-container {
+            margin-bottom: 20px; /* Adjust the margin as needed */
+        }
+
+        #robot-images {
+            margin-top: 40px; /* Adjust the margin as needed */
+            background-color: #333;
+            padding: 20px;
+            border: 4px solid white; /* Increased border thickness */
+            border-radius: 10px;
+            text-align: center; /* Center the images horizontally */
+            position: relative; /* For absolute positioning */
+            margin-bottom: 20px; /* Adjust margin bottom */
+            overflow: hidden; /* Ensure images don't overflow */
+        }
+
+        #robot-images h2 {
+            color: white;
+            position: relative; /* For z-index */
+            z-index: 2; /* Place text above the streak */
+        }
+
+        #robot-images h2::before,
+        #robot-images h2::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 2px;
+            background-color: white;
+            z-index: 1; /* Place streak below text */
+        }
+
+        #robot-images h2::before {
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        #robot-images h2::after {
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        #robot-images img {
+            display: inline-block;
+            margin: 0 10px; /* Add spacing between images */
+            width: 400px;
+            height: 300px; /* Set height to maintain aspect ratio */
+            border: 2px solid white; /* Add border to individual images */
+            border-radius: 10px;
+            opacity: 0; /* Initially hide images */
+            transform: translateY(50px); /* Initially position images below view */
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+        }
+
+        /* CSS for animation when images come into view */
+        #robot-images img.visible {
+            opacity: 1; /* Make images visible */
+            transform: translateY(0); /* Move images to original position */
+        }
+        
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            height: 60px;
+        }
+
+        /* CSS for styling the navigation links */
+        .navbar li {
+            float: left;
+        }
+
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+
+        /* CSS for styling the active link */
+        .navbar a.active {
+            background-color: #007bff;
+        }
+
+        /* CSS for styling the navigation logo */
+        .navbar img {
+            height: 40px; /* Set the height of the image */
+            width: auto; /* Allow the width to adjust proportionally */
+            display: block; /* Make the image a block element */
+            margin: auto; /* Center the image horizontally */
+            position: relative; /* Set position to relative */
+            top: -5px;
+        }
+
+        .navbar li:nth-last-child(1) {
+            margin-left: 583px;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative; /* Make footer fixed at the bottom */
+            width: 100%; /* Full width */
+            bottom: 0; /* Align at the bottom */
+        }
+        footer img {
+            width: 50px; /* Set desired width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* New styles for background image and overlay */
+        header {
+            position: relative;
+            overflow: hidden; /* Ensures no overflow */
+        }
+
+        header img {
+            width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Removes gap below image */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dim effect */
+            pointer-events: none; /* Allows clicks to pass through */
+        }
+    </style>
+</head>
+<body>
+    <!--NAV BAR-->
+    <ul class="navbar">
+        <li><a href="index.html"><img src="images/logos.png" alt="Index Logo"></a></li>
+        <li><a href="members.html">Staff</a></li>
+        <li><a href="merch.html">Merchandise</a></li>
+        <li><a href="about_us.html">About</a></li>
+        <li><a href="oldmembers.html">Team</a></li>
+        <li><a href="contact_us.html">Contact</a></li>
+        <li><a href="https://www.youtube.com/@Luna-Techs-20182"><img src="images/icons8-youtube-48.png" alt="South Tech"></a></li>
+        <li><a href="https://www.instagram.com/ftclunatechs?igsh=MTV1YjR5cTNmZDd6Nw%3D%3D&utm_source=qr"><img src="images/icons8-instagram-48.png" alt="South Tech"></a></li>
+        <li><a href="https://www.tiktok.com/@lunatechs1"><img src="images/icons8-tiktok-48.png" alt="South Tech"></a></li>
+        <li><a href="https://www.ssdmo.org/southtech"><img src="images/South_Tech.png" alt="South Tech"></a></li>
+    </ul>
+    
+    <header>
+        <div class="container">
+            <img src="images/bg.png" alt="Background Image">
+            <div class="overlay"></div>
+            <div class="centered">Luna-Techs</div>
+        </div>
+    </header>
+    <main>
+        <img src="images/logos.png"> 
+        <h1>About Our Program</h1>
+        <p>This course aims to delve into the intricate electrical, electronic, mechanical, and robotic components utilized in manufacturing and industry. Students will also have the opportunity to design and program robots for the annual FIRST Robotics Competition, employing modern tools and techniques.
+        </p>
+        
+        <!-- Add YouTube video here -->
+        <div id="video-container">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/laYVTVkwi5k" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </main>
+    <section class="clear" id="robot-images">
+        <h2>Some of Our Designs</h2>
+        <div>
+            <img src="images/robot.png" class="scroll-element">
+            <img src="images/bot2.jpg" class="scroll-element">
+        </div>
+    </section>
+    
+    <footer>
+        <hr>
+        <p>&copy; 2024 lunatechs20182. All Rights Reserved.</p>
+        <img src="images/FTC_Logo.png.png">
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.scroll-element').forEach(img => {
+                observer.observe(img);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luna Tech</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/members.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <style>
+        /* CSS for the navigation bar */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            height: 60px;
+        }
+
+        /* CSS for styling the navigation links */
+        .navbar li {
+            float: left;
+        }
+
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+
+        /* CSS for styling the active link */
+        .navbar a.active {
+            background-color: #007bff;
+        }
+
+        /* CSS for styling the navigation logo */
+        .navbar img {
+            height: 40px; /* Set the height of the image */
+            width: auto; /* Allow the width to adjust proportionally */
+            display: block; /* Make the image a block element */
+            margin: auto; /* Center the image horizontally */
+            position: relative; /* Set position to relative */
+            top: -5px;
+        }
+
+        .navbar li:nth-last-child(1) {
+            margin-left: 567px;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #Photo img {
+            height: 400px;
+            width: 400px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative; /* Make footer fixed at the bottom */
+            width: 100%; /* Full width */
+            bottom: 0; /* Align at the bottom */
+        }
+
+        footer img {
+            width: 50px; /* Set desired width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Styles for images and animation */
+        .staff-image {
+            opacity: 0; /* Initially hide images */
+            transform: translateY(50px); /* Start below the viewport */
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+        }
+
+        .staff-image.visible {
+            opacity: 1; /* Make images visible */
+            transform: translateY(0); /* Move to original position */
+        }
+
+    </style>
+</head>
+<body>
+    <!--NAV BAR-->
+    <ul class="navbar">
+        <!-- Image link for the index page -->
+        <li><a href="index.html"><img src="images/logos.png" alt="Index Logo"></a></li>
+        <!-- Other navigation links -->
+        <li><a href="members.html">Staff</a></li>
+        <li><a href="merch.html">Merchandise</a></li>
+        <li><a href="about_us.html">About</a></li>
+        <li><a href="oldmembers.html">Team</a></li>
+        <li><a href="contact_us.html">Contact</a></li>
+        <li><a href="https://www.youtube.com/@Luna-Techs-20182"><img src="images/icons8-youtube-48.png" alt="South Tech"></a></li>
+        <li><a href="https://www.instagram.com/ftclunatechs?igsh=MTV1YjR5cTNmZDd6Nw%3D%3D&utm_source=qr"><img src="images/icons8-instagram-48.png" alt="South Tech"></a></li>
+        <li><a href="https://www.tiktok.com/@lunatechs1"><img src="images/icons8-tiktok-48.png" alt="South Tech"></a></li>
+        <li><a href="https://www.ssdmo.org/southtech"><img src="images/South_Tech.png" alt="South Tech"></a></li>
+    </ul>
+    <main>
+        <header>
+            <h1>Faculty and Staff</h1>
+        </header>
+        <main>
+            <div class="container">
+                <div>
+                    <img src="images/Fenoglio_Rich.png" class="staff-image">
+                    <p>Mr. Fenoglio has been teaching in our district for 16 years, </p>
+                    <p>serving as a master teacher and creating a curriculum for DESE.</p>
+                    <p>He began as the Electrical Trades instructor at North Tech and</p>
+                    <p>moved to South Tech to lead the Electronics & Robotics Engineering</p>
+                    <p>program in 2021.</p>
+                </div>
+                <div>
+                    <img src="images/Johnson_Diana.png" class="staff-image">
+                    <p>Ms. Diana Johnson has been working in the field of education for over 17 years. </p> 
+                    <p>Before joining the South Tech team, she worked as a CTE Retention Specialist and </p>
+                    <p>Coordinator of Dual Credit and Enrollment at St. Louis Community College. </p>
+                    <p>She holds a bachelor's in Elementary Education and a master's in </p> 
+                    <p>Information Science & Learning Technology.</p>
+                </div>
+            </div>
+        </main>
+    </main>
+    <section>
+    </section>
+    <footer>
+        <hr>
+        <p>&copy; 2024 lunatechs20182. All Rights Reserved.</p>
+        <img src="images/FTC_Logo.png.png">
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.staff-image').forEach(img => {
+                observer.observe(img);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+

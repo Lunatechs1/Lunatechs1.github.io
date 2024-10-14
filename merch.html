@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Luna Tech</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/members.css">
+    <link rel="stylesheet" href="styles/nav.css">
+
+    <style>
+        /* Additional styles for merchandise page */
+        
+        html {
+            font-family: sans-serif, arial;
+        }
+        
+        .navbar img {
+            height: 40px; /* Set the height of the image */
+            width: auto; /* Allow the width to adjust proportionally */
+            display: block; /* Make the image a block element */
+            margin: auto; /* Center the image horizontally */
+            position: relative; /* Set position to relative */
+            top: -5px;
+        }
+
+        .navbar li:nth-last-child(1) { 
+            margin-left: 664px;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            height: 60px;
+        }
+
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px; /* Add some padding around the grid */
+        }
+
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product img {
+            width: 100%;
+            height: 300px; /* Fixed height for all images */
+            object-fit: cover; /* Ensures images cover the box and maintain aspect ratio */
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        .product p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .product button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer img {
+            width: 50px; /* Set desired width */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <!--NAV BAR-->
+    <ul class="navbar">
+        <!-- Image link for the index page -->
+        <li><a href="index.html"><img src="images/logos.png" alt="Index Logo"></a></li>
+        <!-- Other navigation links -->
+        <li><a href="members.html">Staff</a></li>
+        <li><a href="merch.html">Merchandise</a></li>
+        <li><a href="about_us.html">About</a></li>
+        <li><a href="oldmembers.html">Team</a></li>
+        <li><a href="contact_us.html">Contact</a></li>
+        <li><a href="https://www.youtube.com/@Luna-Techs-20182"><img src="images/icons8-youtube-48.png" alt="YouTube"></a></li>
+        <li><a href="https://www.instagram.com/ftclunatechs?igsh=MTV1YjR5cTNmZDd6Nw%3D%3D&utm_source=qr"><img src="images/icons8-instagram-48.png" alt="Instagram"></a></li>
+        <li><a href="https://www.tiktok.com/@lunatechs1"><img src="images/icons8-tiktok-48.png" alt="TikTok"></a></li>
+        <li><a href="https://www.ssdmo.org/southtech"><img src="images/South_Tech.png" alt="South Tech"></a></li>
+    </ul>
+
+    <main>
+        <section class="products-container">
+            <div class="product">
+                <div class="interactive-photo" onmouseover="changeImage(this)">
+                    <img src="images/hoodboy (1).png" alt="Product 1">
+                </div>
+                <h3>Product 1</h3>
+                <p>Cotton hoodie with our logo, high quality</p>
+                <p>Price: $24</p>
+                <a href="https://stores.inksoft.com/south_tech_robotics/shop/product-detail/1009663">
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+            <div class="product">
+                <div class="interactive-photo" onmouseover="changeImage(this)">
+                    <img src="images/Shirt.PNG" alt="Product 2">
+                </div>
+                <h3>Product 2</h3>
+                <p>Cotton Shirt with our logo, high quality</p>
+                <p>Price: $13.50</p>
+                <a href="https://stores.inksoft.com/south_tech_robotics/shop/product-detail/1009664">
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+            <div class="product">
+                <div class="interactive-photo" onmouseover="changeImage(this)">
+                    <img src="images/oldhoodie.PNG" alt="Product 2">
+                </div>
+                <h3>Product 3</h3>
+                <p>Cotton hoodie with our  old logo, high quality</p>
+                <p>Price: $24</p>
+                <a href="https://stores.inksoft.com/south_tech_robotics/shop/product-detail/1008347">
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+            <div class="product">
+                <div class="interactive-photo" onmouseover="changeImage(this)">
+                    <img src="images/oldshirt.PNG" alt="Product 2">
+                </div>
+                <h3>Product 4</h3>
+                <p>Cotton Shirt with our old logo, high quality</p>
+                <p>Price: $12</p>
+                <a href="https://stores.inksoft.com/south_tech_robotics/shop/product-detail/1008346">
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+            <!-- Add more products as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 lunatechs20182. All Rights Reserved.</p>
+        <img src="images/FTC_Logo.png.png" alt="FTC Logo">
+    </footer>
+</body>
+</html>
