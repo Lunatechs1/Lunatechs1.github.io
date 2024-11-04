@@ -73,45 +73,41 @@
         }
         
         .navbar {
-            background-color: #333;
-            overflow: hidden;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            height: 60px;
-        }
+    background-color: #333;
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    display: flex; /* Use flexbox for easier alignment */
+    align-items: center;
+}
 
-        /* CSS for styling the navigation links */
-        .navbar li {
-            float: left;
-        }
+.navbar li {
+    float: left;
+}
 
-        .navbar a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 15px 20px;
-            text-decoration: none;
-        }
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+}
 
-        /* CSS for styling the active link */
-        .navbar a.active {
-            background-color: #007bff;
-        }
+.navbar img {
+    height: 40px;
+    width: auto;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: -5px;
+}
 
-        /* CSS for styling the navigation logo */
-        .navbar img {
-            height: 40px; /* Set the height of the image */
-            width: auto; /* Allow the width to adjust proportionally */
-            display: block; /* Make the image a block element */
-            margin: auto; /* Center the image horizontally */
-            position: relative; /* Set position to relative */
-            top: -5px;
-        }
-
-        .navbar li:nth-last-child(1) {
-            margin-left: 583px;
-        }
+/* Align the last item (image link) to the right */
+.navbar li:last-child {
+    margin-left: auto; /* Push the last element to the far right */
+}
 
         /* Footer styling */
         footer {
@@ -149,6 +145,25 @@
             background-color: rgba(0, 0, 0, 0.5); /* Dim effect */
             pointer-events: none; /* Allows clicks to pass through */
         }
+
+        /* Event section styling */
+        #events {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-top: 4px solid #333;
+            text-align: center;
+        }
+        #events h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .event-item {
+            margin-bottom: 15px;
+        }
+        .event-item h3 {
+            color: #007bff;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -184,11 +199,33 @@
             <iframe width="640" height="360" src="https://www.youtube.com/embed/laYVTVkwi5k" frameborder="0" allowfullscreen></iframe>
         </div>
     </main>
+
     <section class="clear" id="robot-images">
         <h2>Some of Our Designs</h2>
         <div>
             <img src="images/robot.png" class="scroll-element">
             <img src="images/bot2.jpg" class="scroll-element">
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <div class="event-item">
+            <h3>South Tech Meet Date: December 14, 2024 @ 8 AM</h3>
+            
+        </div>
+        <div class="event-item">
+            <h3>Notre Dame Meet Date: January 11, 2025 @ 8 AM</h3>
+            
+        </div>
+        <div class="event-item">
+            <h3>St. Joseph's Meet Date: January 16, 2025 @ 4:30 PM</h3>
+            
+        </div>
+        <div class="event-item">
+            <h3>STL South League Tournament Date: January 25, 2025</h3>
+            
         </div>
     </section>
     
