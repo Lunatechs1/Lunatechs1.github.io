@@ -71,43 +71,41 @@
             background-color: #45a049;
         }
         .navbar {
-			background-color: #333;
-			overflow: hidden;
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-            height: 60px;
-		}
+    background-color: #333;
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    display: flex; /* Use flexbox for easier alignment */
+    align-items: center;
+}
 
-		/* CSS for styling the navigation links */
-		.navbar li {
-			float: left;
-		}
+.navbar li {
+    float: left;
+}
 
-		.navbar a {
-			display: block;
-			color: white;
-			text-align: center;
-			padding: 15px 20px;
-			text-decoration: none;
-		}
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+}
 
-		/* CSS for styling the active link */
-		.navbar a.active {
-			background-color: #007bff;
-		}
-
-		/* CSS for styling the navigation logo */
-		.navbar img {
-    height: 40px; /* Set the height of the image */
-    width: auto; /* Allow the width to adjust proportionally */
-    display: block; /* Make the image a block element */
-    margin: auto; /* Center the image horizontally */
-    position: relative; /* Set position to relative */
+.navbar img {
+    height: 40px;
+    width: auto;
+    display: block;
+    margin: auto;
+    position: relative;
     top: -5px;
 }
-        .navbar li:nth-last-child(1) { margin-left: 567px;
-        }
+
+/* Align the last item (image link) to the right */
+.navbar li:last-child {
+    margin-left: auto; /* Push the last element to the far right */
+}
         footer {
             background-color: #333;
             color: white;
